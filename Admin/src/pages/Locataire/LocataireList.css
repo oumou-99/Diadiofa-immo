@@ -1,0 +1,39 @@
+.locataireList {
+  flex: 4;
+}
+
+.locataireListUser {
+  display: flex;
+  align-items: center;
+}
+
+.locataireListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.locataireListEdit {
+  color: white;
+  cursor: pointer;
+}
+
+.locataireListDelete {
+  color: white;
+  cursor: pointer;
+}
+.locataireListAdd {
+  color: black;
+  cursor: pointer;
+}
+
+.locataireListAdd {
+  color: black;
+  cursor: pointer;
+}
+.locataireApAdd {
+  color: white;
+  cursor: pointer;
+}

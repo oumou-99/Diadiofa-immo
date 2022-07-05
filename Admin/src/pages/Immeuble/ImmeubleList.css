@@ -1,0 +1,39 @@
+.immeubleList {
+  flex: 4;
+}
+
+.immeubleListUser {
+  display: flex;
+  align-items: center;
+}
+
+.immeubleListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.immeubleListEdit {
+  color: white;
+  font-size: 7px;
+}
+
+.immeubleListDelete {
+  color: white;
+  cursor: pointer;
+}
+.immeubleListAdd {
+  color: black;
+  cursor: pointer;
+}
+
+.immeubleListAdd {
+  color: black;
+  cursor: pointer;
+}
+.immeubleApAdd {
+  color: white;
+  cursor: pointer;
+}

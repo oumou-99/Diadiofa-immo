@@ -1,0 +1,39 @@
+.appartementList {
+  flex: 4;
+}
+
+.appartementListUser {
+  display: flex;
+  align-items: center;
+}
+
+.appartementListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.appartementListEdit {
+  color: white;
+  font-size: 7px;
+}
+
+.appartementListDelete {
+  color: white;
+  cursor: pointer;
+}
+.appartementListAdd {
+  color: black;
+  cursor: pointer;
+}
+
+.appartementListAdd {
+  color: black;
+  cursor: pointer;
+}
+.appartementApAdd {
+  color: white;
+  cursor: pointer;
+}

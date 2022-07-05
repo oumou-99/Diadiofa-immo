@@ -1,0 +1,446 @@
+# Query: $
+# Flags: WordMatch
+# ContextLines: 1
+
+119 résultats - Fichiers 27
+
+admin/src/dummyData.js:
+   74        status: "active",
+   75:       transaction: "$120.00",
+   76      },
+
+   83        status: "active",
+   84:       transaction: "$120.00",
+   85      },
+
+   92        status: "active",
+   93:       transaction: "$120.00",
+   94      },
+
+  101        status: "active",
+  102:       transaction: "$120.00",
+  103      },
+
+  110        status: "active",
+  111:       transaction: "$120.00",
+  112      },
+
+  119        status: "active",
+  120:       transaction: "$120.00",
+  121      },
+
+  128        status: "active",
+  129:       transaction: "$120.00",
+  130      },
+
+  137        status: "active",
+  138:       transaction: "$120.00",
+  139      },
+
+  146        status: "active",
+  147:       transaction: "$120.00",
+  148      },
+
+  155        status: "active",
+  156:       transaction: "$120.00",
+  157      },
+
+  167        status: "active",
+  168:       price: "$120.00",
+  169      },
+
+  176        status: "active",
+  177:       price: "$120.00",
+  178      },
+
+  185        status: "active",
+  186:       price: "$120.00",
+  187      },
+
+  194        status: "active",
+  195:       price: "$120.00",
+  196      },
+
+  203        status: "active",
+  204:       price: "$120.00",
+  205      },
+
+  212        status: "active",
+  213:       price: "$120.00",
+  214      },
+
+  221        status: "active",
+  222:       price: "$120.00",
+  223      },
+
+  230        status: "active",
+  231:       price: "$120.00",
+  232      },
+
+  239        status: "active",
+  240:       price: "$120.00",
+  241      },
+
+  248        status: "active",
+  249:       price: "$120.00",
+  250      },
+
+admin/src/requestMethod.jsx:
+  15     baseURL: BASE_URL,
+  16:    headers: { token: `Bearer ${TOKEN}` },
+  17  });
+
+admin/src/components/featuredInfo/FeaturedInfo.jsx:
+  25              <div className="featuredMoneyContainer">
+  26:                <span className="featuredMoney">${income[1]?.total}</span>
+  27                 <span className="featuredMoneyRate">
+
+  40              <div className="featuredMoneyContainer">
+  41:                <span className="featuredMoney">$4,415</span>
+  42                 <span className="featuredMoneyRate">
+
+  50              <div className="featuredMoneyContainer">
+  51:                <span className="featuredMoney">$2,225</span>
+  52                 <span className="featuredMoneyRate">
+
+admin/src/components/widgetLg/WidgetLg.jsx:
+  38                    <td className="widgetLgDate">{format(order.createdAt)}</td>
+  39:                   <td className="widgetLgAmount">${order.amount}</td>
+  40                    <td className="widgetLgStatus">
+
+admin/src/redux/apiCalls.js:
+  44     try {
+  45:       //const res = await userRequest.delete(`/products/${id}`);
+  46        dispatch(deleteProductSuccess(id));
+
+  54     try {
+  55:       //const res = await userRequest.update(`/products/${id}`, product);
+  56        dispatch(updateProductSuccess({ id, product }));
+
+backend/index.js:
+  30  app.listen(process.env.PORT, () =>
+  31:    console.log(`\nBackend server is running on ${process.env.PORT} :)`)
+  32  );
+
+backend/routes/auth.js:
+  26        const user = await User.findOne({
+  27:          $or: [{ username: req.body.username }, { email: req.body.email }],
+  28        });
+
+backend/routes/cart.js:
+  27           {
+  28:             $set: req.body,
+  29           },
+
+backend/routes/order.js:
+  27           {
+  28:             $set: req.body,
+  29           },
+
+  80           {
+  81:             $match: {
+  82:                createdAt: { $gte: prevMonth },
+  83                 ...(productId && {
+  84:                   products: { $elemMatch: { productId } },
+  85                 }),
+
+  88           {
+  89:             $project: {
+  90:                month: { $month: "$createdAt" },
+  91:                sales: "$amount",
+  92              },
+
+  94           {
+  95:             $group: {
+  96:                _id: "$month",
+  97:                total: { $sum: "$sales" },
+  98              },
+
+backend/routes/product.js:
+  33           {
+  34:             $set: req.body,
+  35           },
+
+  75              categories: {
+  76:                $in: [qCategory],
+  77              },
+
+backend/routes/user.js:
+  15        const data = await User.aggregate([
+  16:          { $match: { createdAt: { $gte: lastYear } } },
+  17           {
+  18:             $project: {
+  19:                month: { $month: "$createdAt" },
+  20              },
+
+  22           {
+  23:             $group: {
+  24:                _id: "$month",
+  25:                total: { $sum: 1 },
+  26              },
+
+  70           req.params.id,
+  71:          { $set: req.body },
+  72           { new: true }
+
+frontend/src/requestMethod.js:
+  12     baseURL: BASE_URL,
+  13:    header: { token: `Bearer ${TOKEN}` },
+  14  });
+
+frontend/src/responsive.js:
+  5        @media only screen and (max-width: 576px) {
+  6:          ${props}
+  7        }
+
+frontend/src/components/Announcement.jsx:
+  14  const Announcement = () => {
+  15:    return <Container>Super free shipping on Orders over 50$</Container>;
+  16  };
+
+frontend/src/components/Categories.jsx:
+  10     justify-content: space-between;
+  11:    ${mobile({ padding: 0, flexDirection: "colum" })}
+  12  `;
+
+frontend/src/components/CategoryItem.jsx:
+  14     object-fit: cover;
+  15:    ${mobile({ height: "20vh" })}
+  16  `;
+
+  43        <Container>
+  44:          <Link to={`/products/${item.cat}`}>
+  45              <Image src={item.img} />
+
+frontend/src/components/Footer.jsx:
+  15     display: flex;
+  16:    ${mobile({ flexDirection: "column" })}
+  17  `;
+
+  36     color: white;
+  37:    background-color: #${(props) => props.bg};
+  38     display: flex;
+
+  45     padding: 20px;
+  46:    ${mobile({ display: "none" })}
+  47  `;
+
+  67     padding: 20px;
+  68:    ${mobile({ backgroundColor: "#fff8f8" })}
+  69  `;
+
+frontend/src/components/Navbar.jsx:
+  10     height: 60px;
+  11:    ${mobile({ height: "50px" })}
+  12  `;
+
+  18     justify-content: space-between;
+  19:    ${mobile({ padding: "10px 0px" })}
+  20  `;
+
+  30     cursor: pointer;
+  31:    ${mobile({ display: "none" })}
+  32  `;
+
+  35     border: none;
+  36:    ${mobile({ width: "50px" })}
+  37     background-color: whitesmoke;
+
+  56     text-align: center;
+  57:    ${mobile({ with: "24px" })}
+  58  `;
+
+  65  
+  66:    ${mobile({ flex: 2, justifyContent: "center" })}
+  67  `;
+
+  73  
+  74:    ${mobile({ fontSize: "12px", marginLeft: "10px" })};
+  75  `;
+
+frontend/src/components/Newsletter.jsx:
+  21     margin-bottom: 20px;
+  22:    ${mobile({ textAlign: "center" })}
+  23  `;
+
+  30     border: 1px solid lightgray;
+  31:    ${mobile({ width: "80%" })}
+  32  `;
+
+frontend/src/components/Product.jsx:
+  34     position: relative;
+  35:    &:hover ${Info} {
+  36        opacity: 1;
+
+  76              <Icon>
+  77:                <Link to={`/product/${item._id}`}>
+  78                    <SearchOutlined />
+
+frontend/src/components/Products.jsx:
+  22                 cat
+  23:                   ? `http://localhost:5000/api/products?category=${cat}`
+  24                    : "http://localhost:5000/api/products"
+
+frontend/src/components/Slider.jsx:
+   16     display: flex;
+   17:    transform: translateX(${(props) => props.slideIndex * -100}vw);
+   18  `;
+
+   30     bottom: 0;
+   31:    left: ${(props) => props.direction === "left" && "10px"};
+   32:    right: ${(props) => props.direction === "right" && "10px"};
+   33     margin: auto;
+
+   43     align-items: center;
+   44:    background-color: #${(props) => props.bg};
+   45:    ${mobile({ height: "80vh" })}
+   46  `;
+
+   50     flex: 2;
+   51:    ${mobile({ display: "none" })}
+   52  `;
+
+   62     padding: 50px;
+   63:    ${mobile({ padding: "30px" })}
+   64  `;
+
+   66     font-size: 70px;
+   67:    ${mobile({ fontSize: "45px" })}
+   68  `;
+
+   73     letter-spacing: 3px;
+   74:    ${mobile({ fontSize: "16px" })}
+   75  `;
+
+   80     cursor: pointer;
+   81:    ${mobile({ marginTop: "30px" })}
+   82  `;
+
+  102                    <ImageContainer>
+  103:                      <Image src={`images/${item.img}`} />
+  104                    </ImageContainer>
+
+frontend/src/pages/Cart.jsx:
+   18     padding: 20px;
+   19:    ${mobile({ padding: "10px" })}
+   20  `;
+
+   35     cursor: pointer;
+   36:    border: ${(props) => props.type === "filled" && "none"};
+   37:    background-color: ${(props) =>
+   38        props.type === "filled" ? "black" : "transparent"};
+   39:    color: ${(props) => props.type === "filled" && "white"};
+   40  `;
+
+   42  const TopTexts = styled.div`
+   43:    ${mobile({ width: "100%" })}
+   44  `;
+
+   54     background-color: whitesmoke;
+   55:    ${mobile({ flexDirection: "column" })}
+   56  `;
+
+   98     border-radius: 50%;
+   99:    background-color: ${(props) => props.color};
+  100  `;
+
+  119     border-radius: 5px;
+  120:    ${mobile({ margin: "10px 0px" })}
+  121  `;
+
+  124     font-weight: 200;
+  125:    ${mobile({ margin: "5px 15px" })}
+  126  `;
+
+  137     justify-content: space-between;
+  138:    font-weight: ${(props) => props.type === "total" && "500"};
+  139:    font-size: ${(props) => props.type === "total" && "24px"};
+  140  `;
+
+  227                                <ProductPrice>
+  228:                                  XOF {product.price * product.quantity}
+  229                                </ProductPrice>
+
+  243                       <SummaryItemText>Estimated Shipping </SummaryItemText>
+  244:                      <SummaryItemPrice>XOF 5.98</SummaryItemPrice>
+  245                    </SummaryItem>
+
+  247                       <SummaryItemText>Shipping Discount</SummaryItemText>
+  248:                      <SummaryItemPrice>XOF -5.90</SummaryItemPrice>
+  249                    </SummaryItem>
+
+  251                       <SummaryItemText>Total</SummaryItemText>
+  252:                      <SummaryItemPrice>XOF 80</SummaryItemPrice>
+  253                    </SummaryItem>
+
+  258                       shippingAddress
+  259:                      description={`Your total is XOF${cart.total}`}
+  260                       amount={cart.total * 100}
+
+frontend/src/pages/Login.jsx:
+  15     background-size: cover;
+  16:    ${mobile({ justifyContent: "center" })}
+  17  `;
+
+  25     background-color: white;
+  26:    ${mobile({ width: "75%", marginLeft: "7px", height: "50%" })}
+  27  `;
+
+  75     }
+  76:    ${mobile({ margin: "20px 0px" })}
+  77  `;
+
+  81     margin-top: 7px;
+  82:    ${mobile({ textAlign: "center" })}
+  83  `;
+
+frontend/src/pages/Product.jsx:
+   17     display: flex;
+   18:    ${mobile({ flexDirection: "column" })}
+   19  `;
+
+   26     object-fit: cover;
+   27:    ${mobile({ height: "40vh" })}
+   28  `;
+
+   31     padding: 0px 20px;
+   32:    ${mobile({ padding: "10px" })}
+   33  `;
+
+   49     justify-content: space-between;
+   50:    ${mobile({ width: "100%" })}
+   51  `;
+
+   63     border-radius: 50%;
+   64:    background-color: ${(props) => props.color};
+   65     margin: 0px 5px;
+
+   78     justify-content: space-between;
+   79:    ${mobile({ width: "100%" })}
+   80  `;
+
+  156                 <Description>{product.desc}</Description>
+  157:                <Price>XOF {product.price}</Price>
+  158                 <FilterContainer>
+
+frontend/src/pages/ProductList.jsx:
+  20     margin: 20px;
+  21:    ${mobile({ padding: "0px 20px", display: "flex", flexDirection: "column" })}
+  22  `;
+
+  27     margin-right: 20px;
+  28:    ${mobile({ marginRight: "0px" })}
+  29  `;
+
+  33     margin-right: 20px;
+  34:    ${mobile({ margin: "10px 0px" })}
+  35  `;
+
+frontend/src/pages/Register.jsx:
+  13     background-size: cover;
+  14:    ${mobile({ justifyContent: "center" })}
+  15  `;
+
+  23     background-color: white;
+  24:    ${mobile({ width: "75%", marginLeft: "7px", height: "82%" })}
+  25  `;
