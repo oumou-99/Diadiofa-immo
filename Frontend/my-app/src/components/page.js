@@ -1663,3 +1663,23 @@ function Page() {
 }
 
 export default Page;
+
+<div style={{ display: "flex" }}>
+  <div className="p-4 pb-0">
+    <h5 className="text-primary mb-3">{option.prix} FCFA</h5>
+    <a className="d-block h5 mb-2" href="">
+      {option.immeuble.nom}
+    </a>
+  </div>
+  <div className="p-4 pb-0">
+    <span
+      className="col-4 text-center wow fadeInUp"
+      style={{ marginTop: "70px" }}
+      data-wow-delay="0.1s"
+    >
+      <a className="btn btn-primary py-1 " href="#">
+        Voir
+      </a>
+    </span>
+  </div>
+</div>;

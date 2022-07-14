@@ -12,7 +12,6 @@ const Call = () => {
                 <img
                   className="img-fluid rounded w-100"
                   src="img/call-to-action.jpg"
-                  alt
                 />
               </div>
               <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -26,11 +25,11 @@ const Call = () => {
                     projet{" "}
                   </p>
                 </div>
-                <a href className="btn btn-primary py-3 px-4 me-2">
+                <a className="btn btn-primary py-3 px-4 me-2">
                   <i className="fa fa-phone-alt me-2" />
                   Envoyer un message
                 </a>
-                <a href className="btn btn-dark py-3 px-4">
+                <a className="btn btn-dark py-3 px-4">
                   <i className="fa fa-calendar-alt me-2" />
                   Prendre un rdv
                 </a>

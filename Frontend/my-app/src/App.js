@@ -1,10 +1,12 @@
+import About from "./pages/About";
+import Villa from "./pages/Villa";
+import Maison from "./pages/Maison";
+import Contact from "./pages/Contact";
+import Demande from "./pages/Demande";
+import Terrain from "./pages/Terrain";
 import Accueil from "./pages/Accueil";
 import Appartement from "./pages/Appartement";
-import Maison from "./pages/Maison";
-import Terrain from "./pages/Terrain";
-import Villa from "./pages/Villa";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,8 +26,8 @@ function App() {
         <Route path="/villa" element={<Villa />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/demande" element={<Demande />} />
       </Routes>
-      ;
     </Router>
   );
 }

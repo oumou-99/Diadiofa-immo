@@ -1,9 +1,41 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
+import { userRequest } from "../requestMethod";
+import Property from "../components/AllProperty/Property";
+import Appartement from "../components/AllProperty/Appartement";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Demande from "../components/Demande";
+import DemandeChild from "../components/Demande";
 
-function Contact() {
+const Demande = ({ appartement, property, props }) => {
+  const [propertyId, setPropertyId] = useState([]);
+  const [appartementId, setAppartementId] = useState([]);
+  const location = useLocation();
+  const id = props.location.state.PropertyId;
+
+  useEffect(() => {
+    const getAppartement = async () => {
+      try {
+        if (["Villa", "Terrain", "Maison"].includes(params.type)) {
+          const result = await userRequest.get("/autrePropriete/" + id);
+          setPropertyId(result.data);
+          console.log(propertyId);
+          console.log(params.type);
+        } else {
+          const result = await userRequest.get("/appartement/" + id);
+          setAppartementId(result.data);
+          console.log(appartementId);
+          console.log(params.type);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getAppartement();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -14,7 +46,7 @@ function Contact() {
             data-wow-delay="0.1s"
             style={{ maxWidth: "600px" }}
           >
-            <h1 className="mb-3">Contactez-nous</h1>
+            <h1 className="mb-3">Demande</h1>
             <p>
               Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
               dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed
@@ -22,6 +54,13 @@ function Contact() {
             </p>
           </div>
           <div className="row g-4">
+            <div className="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              {property && <Property property={property} />}
+              {appartement && <Appartement appartement={appartement} />}
+            </div>
+            <DemandeChild />
+          </div>
+          <div className="row g-4 pt-4">
             <div className="col-12">
               <div className="row gy-4">
                 <div
@@ -77,7 +116,7 @@ function Contact() {
                     >
                       <div
                         className="icon me-3"
-                        style={{ width: "45px", height: " 45px" }}
+                        style={{ width: "45px", height: "45px" }}
                       >
                         <i className="fa fa-phone-alt text-primary"></i>
                       </div>
@@ -91,23 +130,12 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <iframe
-                className="position-relative rounded w-100 h-100"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15432.61312445312!2d-17.461401!3d14.7603929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab0825b64de71bec!2sCtre%20Sportiff%20de%20la%20BCEAO%2C%20Dakar!5e0!3m2!1sfr!2ssn!4v1657026150730!5m2!1sfr!2ssn"
-                width="600"
-                height="450"
-                style={{ minHeight: "400px", border: "0" }}
-                loading="lazy"
-              ></iframe>
-            </div>
-            <Demande />
           </div>
         </div>
       </div>
       <Footer />
     </>
   );
-}
+};
 
-export default Contact;
+export default Demande;

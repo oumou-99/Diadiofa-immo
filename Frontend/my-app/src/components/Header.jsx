@@ -11,10 +11,7 @@ const Accueil = () => {
             <br />
             Définissez votre de besoin et nos agents vous suivront .
           </p>
-          <a
-            href="#"
-            className="btn btn-primary py-3 px-5 me-3 animated fadeIn"
-          >
+          <a className="btn btn-primary py-3 px-5 me-3 animated fadeIn">
             Commencez
           </a>
         </div>

@@ -32,26 +32,17 @@ const AllPropertyList = ({ property, appartement, title }) => {
                 <a
                   className="btn btn-outline-primary active"
                   data-bs-toggle="pill"
-                  href="#tab-1"
                 >
                   Liste
                 </a>
               </li>
               <li className="nav-item me-2">
-                <a
-                  className="btn btn-outline-primary"
-                  data-bs-toggle="pill"
-                  href="#tab-2"
-                >
+                <a className="btn btn-outline-primary" data-bs-toggle="pill">
                   à vendre
                 </a>
               </li>
               <li className="nav-item me-0">
-                <a
-                  className="btn btn-outline-primary"
-                  data-bs-toggle="pill"
-                  href="#tab-3"
-                >
+                <a className="btn btn-outline-primary" data-bs-toggle="pill">
                   à louer
                 </a>
               </li>
@@ -70,9 +61,7 @@ const AllPropertyList = ({ property, appartement, title }) => {
           style={{ marginTop: "70px" }}
           data-wow-delay="0.1s"
         >
-          <a className="btn btn-primary py-3 px-5" href="#">
-            Browse More Property
-          </a>
+          <a className="btn btn-primary py-3 px-5">Browse More Property</a>
         </div>
       </div>
     </div>

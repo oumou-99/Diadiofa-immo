@@ -13,44 +13,37 @@ const Footer = () => {
               Diamalaye
             </p>
             <p className="mb-2">
-              <i className="fa fa-phone-alt me-2" /> +221 33 962 59 50\77 677 08
-              18\77 208 46 45
+              <i className="fa fa-phone-alt me-2" /> +221 33 962 59 50 - 77 677
+              08 18 - 77 208 46 45
             </p>
             <p className="mb-2">
               <i className="fa fa-envelope me-2" />
               diadiofa@aokcorporation.com
             </p>
             <div className="d-flex pt-2">
-              <a className="btn btn-outline-light btn-social" href="#">
+              <a className="btn btn-outline-light btn-social">
                 <i className="fab fa-twitter" />
               </a>
-              <a className="btn btn-outline-light btn-social" href="#">
+              <a className="btn btn-outline-light btn-social">
                 <i className="fab fa-facebook-f" />
               </a>
-              <a className="btn btn-outline-light btn-social" href="#">
+              <a className="btn btn-outline-light btn-social">
                 <i className="fab fa-youtube" />
               </a>
-              <a className="btn btn-outline-light btn-social" href="#">
+              <a className="btn btn-outline-light btn-social">
                 <i className="fab fa-linkedin-in" />
               </a>
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <h5 className="text-white mb-4">Liens Rapides</h5>
-            <a className="btn btn-link text-white-50" href="#">
-              A propos de nous
-            </a>
-            <a className="btn btn-link text-white-50" href="#">
-              Contact
-            </a>
-            <a className="btn btn-link text-white-50" href="#">
-              {" "}
-              Services
-            </a>
-            <a className="btn btn-link text-white-50" href="#">
+            <a className="btn btn-link text-white-50">A propos de nous</a>
+            <a className="btn btn-link text-white-50">Contact</a>
+            <a className="btn btn-link text-white-50"> Services</a>
+            <a className="btn btn-link text-white-50">
               Politique de confidentialité
             </a>
-            <a className="btn btn-link text-white-50" href="#">
+            <a className="btn btn-link text-white-50">
               Termes &amp; Conditions
             </a>
           </div>
@@ -122,18 +115,15 @@ const Footer = () => {
         <div className="copyright">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              ©{" "}
-              <a className="border-bottom" href="#">
-                diadiofa@aokcorporation.com
-              </a>
-              , Tous droits réservés.
+              © <a className="border-bottom">diadiofa@aokcorporation.com</a>,
+              Tous droits réservés.
             </div>
             <div className="col-md-6 text-center text-md-end">
               <div className="footer-menu">
-                <a href="#">Accueil</a>
-                <a href="#">Cookies</a>
-                <a href="#">Aide</a>
-                <a href="#">FQAs</a>
+                <a>Accueil</a>
+                <a>Cookies</a>
+                <a>Aide</a>
+                <a>FQAs</a>
               </div>
             </div>
           </div>

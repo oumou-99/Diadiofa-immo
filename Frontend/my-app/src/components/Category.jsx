@@ -43,11 +43,7 @@ const Category = ({ property, appartement }) => {
             <a className="cat-item d-block bg-light text-center rounded p-3">
               <div className="rounded p-4">
                 <div className="icon mb-3">
-                  <img
-                    className="img-fluid"
-                    src="img/icon-apartment.png"
-                    alt="Icon"
-                  />
+                  <img className="img-fluid" src="img/icon-apartment.png" />
                 </div>
                 <h6>Appartement</h6>
                 <span>{app} Proprietés</span>
@@ -58,11 +54,7 @@ const Category = ({ property, appartement }) => {
             <a className="cat-item d-block bg-light text-center rounded p-3">
               <div className="rounded p-4">
                 <div className="icon mb-3">
-                  <img
-                    className="img-fluid"
-                    src="img/icon-villa.png"
-                    alt="Icon"
-                  />
+                  <img className="img-fluid" src="img/icon-villa.png" />
                 </div>
                 <h6>Villa</h6>
                 <span>{villa} Proprietés</span>
@@ -73,11 +65,7 @@ const Category = ({ property, appartement }) => {
             <a className="cat-item d-block bg-light text-center rounded p-3">
               <div className="rounded p-4">
                 <div className="icon mb-3">
-                  <img
-                    className="img-fluid"
-                    src="img/icon-house.png"
-                    alt="Icon"
-                  />
+                  <img className="img-fluid" src="img/icon-house.png" />
                 </div>
                 <h6>Maison</h6>
                 <span>{maison} Proprietés</span>
